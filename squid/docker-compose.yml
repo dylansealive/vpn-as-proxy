@@ -1,0 +1,15 @@
+version: "3"
+services:
+  proxy:
+    image: squidproxy:1.0
+    container_name: vpnproxy
+    ports:
+      - 3128:3128
+    # https://stackoverflow.com/questions/30547484/calling-openconnect-vpn-client-in-docker-container-shows-tunsetiff-failed-opera
+    cap_add: 
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    volumes:
+      - ./client.ovpn:/home/client.ovpn
+    restart: always

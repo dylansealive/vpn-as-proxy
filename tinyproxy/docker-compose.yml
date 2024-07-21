@@ -3,9 +3,6 @@ services:
   proxy:
     image: vpnproxy
     container_name: vpnproxy
-    build:
-      context: openvpn
-      dockerfile: Dockerfile
     ports:
       - 8888:8888
     # https://stackoverflow.com/questions/30547484/calling-openconnect-vpn-client-in-docker-container-shows-tunsetiff-failed-opera
@@ -14,5 +11,5 @@ services:
     devices:
       - /dev/net/tun
     volumes:
-      - ~/ovpn.ovpn:/home/ovpn.ovpn
+      - ~/client.ovpn:/home/client.ovpn
     restart: always

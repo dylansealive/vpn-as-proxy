@@ -150,10 +150,7 @@ Host <需要使用代理进行连接的地址>
 	# ProxyCommand {connect.exe的路径，如果需要的话加上引号} -H localhost:{.env中配置的代理服务器端口} %h %p
 ```
 
-如果SSH连接时遇到了问题，请参考这个StackOverflow的问题(https://stackoverflow.com/questions/19161960/connect-with-ssh-through-a-proxy)。
-
-
-## 2. 使用镜像中的SSH客户端
+如果SSH连接时遇到了问题，请参考这个StackOverflow的问题(https://stackoverflow.com/questions/19161960/connect-with-ssh-through-a-proxy)。## 2. 使用镜像中的SSH客户端
 
 镜像中默认安装了SSH，接下来只需要进入容器的`bash`中，即可通过SSH链接到内网机器了。在容器启动时将主机的`~/.ssh`目录映射到了容器的`/root/.ssh`目录，主机和容器共享SSH密钥对。所以主机能免密登录的机器，容器也可以。
 

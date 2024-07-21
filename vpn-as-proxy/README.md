@@ -21,10 +21,7 @@ Using docker, this project converts VPN connecting into a proxy.
 	- [2. Using SSH client in this image](#2-using-ssh-client-in-this-image)
 - [Port forwarding](#port-forwarding)
 - [Motivation](#motivation)
-- [Implementation](#implementation)
-
-
-# How to use?
+- [Implementation](#implementation)# How to use?
 
 ## 1. Configuration
 
@@ -217,5 +214,3 @@ Check out [the related article on my blog](https://ddadaal.me/articles/vpn-as-ht
 - Base image: `debian:buster-slim`
 - VPN client: `openconnect`
 - Proxy: `tinyproxy`
-
-
