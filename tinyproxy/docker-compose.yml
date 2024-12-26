@@ -1,7 +1,9 @@
 version: "3"
 services:
   proxy:
-    image: vpnproxy
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: vpnproxy
     ports:
       - 8888:8888
